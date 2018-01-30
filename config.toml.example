@@ -1,0 +1,6 @@
+[Server]
+port = 1234
+
+[OpenWeatherMap]
+base_url = "api.openweathermap.org/data/2.5/forecast"
+api_key = "ここにAPIKEYを設定します"

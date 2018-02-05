@@ -7,8 +7,7 @@ import (
 )
 
 type ApiClient struct {
-	BaseUrl string
-	//	URL        *url.URL
+	BaseUrl    string
 	HTTPClient *http.Client
 	Logger     *log.Logger
 }

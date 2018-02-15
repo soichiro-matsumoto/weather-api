@@ -20,5 +20,8 @@ vendor
 .vscode
 debug
 
+# node.js node_modules
+node_modules
+
 # config.toml
 config.toml

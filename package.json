@@ -15,5 +15,20 @@
   "bugs": {
     "url": "https://github.com/soichiro-matsumoto/weather-api/issues"
   },
-  "homepage": "https://github.com/soichiro-matsumoto/weather-api#readme"
+  "homepage": "https://github.com/soichiro-matsumoto/weather-api#readme",
+  "dependencies": {
+    "babel-preset-react": "^6.24.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browserify": "^16.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-uglify": "^3.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "vinyl-source-stream": "^2.0.0"
+  }
 }

@@ -25,3 +25,6 @@ node_modules
 
 # config.toml
 config.toml
+
+# gulp dest
+public

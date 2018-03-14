@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 class Test extends React.Component {
   render(){
     return (
-      <h1>React.jsのテスト</h1>
+      <h3>React.js-App</h3>
     );
   }
 }

@@ -38,24 +38,26 @@ func main() {
 	// Echoのインスタンス作る
 	e := echo.New()
 
+	// 全てのリクエストで差し込みたいミドルウェア（ログとか）はここ
+	e.Use(middleware.Logger())
+	e.Use(middleware.Recover())
+
 	renderer := &TemplateRenderer{
 		templates: template.Must(template.ParseGlob("resources/templates/*.html")),
 	}
 	e.Renderer = renderer
 
 	// Named route "foobar"
-	e.GET("", func(c echo.Context) error {
+	e.GET("/", func(c echo.Context) error {
 		return c.Render(http.StatusOK, "index.html", map[string]interface{}{
 			"name": "Dolly!",
 		})
 	})
 
-	// 全てのリクエストで差し込みたいミドルウェア（ログとか）はここ
-	e.Use(middleware.Logger())
-	e.Use(middleware.Recover())
-
 	// ルーティング
 	e.GET("/weather", handlers.GetWeather())
+
+	e.Static("/js", "public/js")
 
 	// サーバー起動
 	e.Start(":" + strconv.Itoa(Config.Server.Port))
